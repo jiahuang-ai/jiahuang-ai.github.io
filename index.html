@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jia Huang</title>
+  <meta name="description" content="Jia Huang: research on video world models, video generation, and preference/reward post-training for video diffusion.">
+  <meta property="og:title" content="Jia Huang">
+  <meta property="og:description" content="Video world models · video generation and editing · preference and reward optimization for video diffusion.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+
+  <!-- ============ Header ============ -->
+  <header class="intro">
+    <div class="intro-text">
+      <h1>Jia Huang</h1>
+      <p class="tagline">Video world models · Video generation · Preference &amp; reward post-training</p>
+
+      <p>
+        I am an M.S. student in Applied Analytics at
+        <a href="https://www.columbia.edu/">Columbia University</a>.
+        I study how to make generative video models usable as <strong>world models</strong>:
+        keeping them physically consistent and improving them through preference and reward post-training.
+        My work covers simulator-grounded video data, reward-guided post-training of video world models,
+        and region-aware preference optimization for video inpainting.
+      </p>
+      <p>
+        I currently work with <a href="https://www.cs.rochester.edu/~cxu22/">Prof. Chenliang Xu</a>
+        at the University of Rochester on the VIGIL project (ARPA-H PARADIGM), and previously worked with
+        Prof. Hao Tang at Peking University on physically consistent video world models.
+        I received my B.Eng. (First Class Honours) from the University of Liverpool &amp;
+        Xi'an Jiaotong-Liverpool University.
+      </p>
+      <p class="callout">I am applying to Ph.D. programs for Fall 2027.</p>
+
+      <p class="links">
+        <a href="mailto:jh5117@columbia.edu">Email</a>
+        <!-- Put a web version of your CV (without phone number) at site/cv.pdf, then uncomment: -->
+        <!-- <span>/</span> <a href="cv.pdf">CV</a> -->
+        <!-- <span>/</span> <a href="https://scholar.google.com/citations?user=XXXX">Google Scholar</a> -->
+        <!-- <span>/</span> <a href="https://github.com/XXXX">GitHub</a> -->
+        <!-- <span>/</span> <a href="https://huggingface.co/XXXX">Hugging Face</a> -->
+        <!-- <span>/</span> <a href="https://www.linkedin.com/in/XXXX">LinkedIn</a> -->
+      </p>
+    </div>
+    <img class="portrait" src="images/profile.jpg" alt="Photo of Jia Huang" width="240" height="240">
+  </header>
+
+  <!-- ============ News ============ -->
+  <section>
+    <h2>News</h2>
+    <ul class="news">
+      <li><span class="date">2026</span> <span><em>PVI-DPO</em> advanced to Phase 2 of AAAI 2027 review.</span></li>
+      <li><span class="date">2026</span> <span><em>SVP-Rerank</em> accepted at NLPCC 2026 Shared Tasks; <strong>ranked 1st of 10 teams</strong> on Track 2.</span></li>
+      <li><span class="date">Jun 2026</span> <span>Joined the VIGIL project at the University of Rochester as a research collaborator.</span></li>
+      <li><span class="date">Mar 2026</span> <span>Started as a research assistant at Peking University on physically consistent video world models.</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ Research ============ -->
+  <section>
+    <h2>Research</h2>
+    <p class="section-note">Interests: video world models; video generation and editing; preference and reward optimization for video diffusion; 3D/4D vision; embodied perception.</p>
+
+    <article class="pub">
+      <img class="pub-thumb" src="images/pvi-dpo.jpg" alt="PVI-DPO qualitative comparison against FloED and VideoPainter" loading="lazy">
+      <div class="pub-body">
+        <h3>PVI-DPO: Perceptual Video Inpainting via Informative-Safe Preference Mining and Region-Aware Direct Preference Optimization</h3>
+        <p class="authors"><strong>Jia Huang</strong>, Hongyou Zhou, Qi Huang, Hongbin Liu, Zhengqi Sun, Lumin Xu</p>
+        <p class="venue">Under review at AAAI 2027 (advanced to Phase 2)</p>
+        <!-- <p class="pub-links"><a href="https://arxiv.org/abs/XXXX">arXiv</a> / <a href="https://github.com/XXXX">Code</a></p> -->
+        <p class="summary">
+          Annotator-free preference mining for video inpainting: the clean video is the winner and a mid-difficulty model rollout,
+          composited only inside the mask, is the loser. A region-aware, winner-safe DPO objective weights the masked region,
+          its boundary, and visible context separately, improving the DiffuEraser backbone on every reported metric on DAVIS and YouTube-VOS.
+        </p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <img class="pub-thumb" src="images/svp-rerank.png" alt="SVP-Rerank framework diagram" loading="lazy">
+      <div class="pub-body">
+        <h3>SVP-Rerank: Difficulty-Conditioned Speech–Visual–Procedural Evidence Reranking for Medical Instructional Video Retrieval</h3>
+        <p class="authors">Peng Zhang, Hongyou Zhou, <strong>Jia Huang</strong></p>
+        <p class="venue">NLPCC 2026 Shared Tasks &amp; Evaluation (accepted) · <span class="highlight">1st of 10 teams, Track 2</span></p>
+        <p class="summary">
+          Builds an offline evidence bank of ASR transcripts, VLM-extracted visual fields, and procedure-aware step units from raw videos,
+          then routes simple and complex queries to different evidence and reranks with a lightweight query-normalized reranker.
+        </p>
+      </div>
+    </article>
+
+    <h3 class="subhead">Other manuscripts (causal inference)</h3>
+    <article class="pub">
+      <img class="pub-thumb" src="images/pin-network.png" alt="PIN coverage, interval length, and bias results across treatment-propensity shift levels" loading="lazy">
+      <div class="pub-body">
+        <h3>Robust Propagation-Integrated Inference for Observational Studies with Network Interference</h3>
+        <p class="authors">Pengyun Wang, Qi Huang, <strong>Jia Huang</strong>, Yutong Zhou</p>
+        <p class="venue">Under review at ICLR 2027</p>
+        <p class="summary">
+          Under network interference, treatment-propensity errors propagate through the network into exposure probabilities.
+          PIN builds observable propagation directions via cross-fitting and uses them for both point estimation and a
+          propagation-integrated standard error, keeping 97–98% coverage while reducing absolute bias by 32–78% over the state-of-the-art baseline.
+        </p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <img class="pub-thumb" src="images/proximal-weak.png" alt="Sampling fluctuation and uniform expansion remainder across sample sizes and proxy strengths" loading="lazy">
+      <div class="pub-body">
+        <h3>Simultaneous Inference for Proximal Causal Learning with Weak Proxies</h3>
+        <p class="authors">Pengyun Wang, Qi Huang, <strong>Jia Huang</strong>, Yutong Zhou</p>
+        <p class="venue">Under review at ICLR 2027</p>
+        <p class="summary">
+          Simultaneous confidence bands for counterfactual distributions and quantile treatment effects when proxies are weak.
+          A sharper population-bias bound replaces the Cauchy–Schwarz bound (which overestimates bias ~50×), yielding
+          quantile-effect bands with 99.8–100% coverage at only ~20% wider than oracle bands.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Experience ============ -->
+  <section>
+    <h2>Research Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="org">University of Rochester · VIGIL, ARPA-H PARADIGM Program</span>
+        <span class="when">Jun 2026 – Present</span>
+      </div>
+      <p class="role">Research Collaborator (remote) · Primary Developer, Voice Intelligence · Advisor: Prof. Chenliang Xu</p>
+      <ul>
+        <li>Lead the Rochester voice-intelligence workstream of VIGIL, a multi-institution clinical-assistance system: data collection, modeling, evaluation, ROS 2 integration, and deployment.</li>
+        <li>Designed a two-stage "Hey VIGIL" trigger (openWakeWord GRU front end + verifier head on the frozen Qwen3-ASR-1.7B encoder), raising participant-disjoint F1 from 0.75 to 0.97.</li>
+        <li>Built the data-collection platform (1,673 recordings from 39 participants) and integrated streaming ASR and voice authorization into the live ROS 2 agent loop.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="org">Peking University</span>
+        <span class="when">Mar 2026 – Jul 2026</span>
+      </div>
+      <p class="role">Research Assistant (remote) · Physically Consistent Video World Models · Advisor: Prof. Hao Tang</p>
+      <ul>
+        <li>Studied long-horizon failure modes of video world models: background drift, object deformation, camera-trajectory mismatch, and inconsistency on re-observation.</li>
+        <li>Built a simulator-grounded corpus of ~5,000 moving-camera physical-interaction sequences with aligned RGB, depth, masks, camera poses, and event-aware prompts.</li>
+        <li>Post-trained LingBot-Fast with LoRA and GRPO-based reward guidance, using rewards from RAFT flow, DINOv2, epipolar geometry, and V-JEPA 2 representations.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="org">Industry</span>
+        <span class="when">2024 – 2025</span>
+      </div>
+      <ul>
+        <li><strong>Re Research Institute, Shanghai Mingpin Medical Data Technology</strong> (2025): Medical vision research intern; lesion/organ segmentation, MedSAM pre-annotation, latent diffusion for rare-lesion synthesis.</li>
+        <li><strong>iFLYTEK</strong> (Apr – Aug 2024): Robotics vision intern; CNN/YOLO perception prototypes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Education ============ -->
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="org">Columbia University</span>
+        <span class="when">2025 – 2026</span>
+      </div>
+      <p class="role">M.S. in Applied Analytics · GPA 3.89/4.00</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="org">University of Liverpool &amp; Xi'an Jiaotong-Liverpool University</span>
+        <span class="when">2021 – 2025</span>
+      </div>
+      <p class="role">B.Eng. (Hons) in Data Science and Big Data Technology (dual degree) · First Class Honours</p>
+    </div>
+  </section>
+
+  <!-- ============ Honors ============ -->
+  <section>
+    <h2>Honors</h2>
+    <ul class="news">
+      <li><span class="date">2026</span> <span>1st of 10 teams, NLPCC 2026 Shared Task, Track 2 (medical instructional video retrieval)</span></li>
+      <li><span class="date">2025</span> <span>First Class Honours, University of Liverpool</span></li>
+      <li><span class="date">2024</span> <span>National Second Prize (Finals) and Provincial First Prize, 19th iFLYTEK Intelligent Vehicle Competition</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    Last updated September 2026.
+  </footer>
+</main>
+</body>
+</html>

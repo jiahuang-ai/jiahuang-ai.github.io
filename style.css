@@ -1,0 +1,180 @@
+:root {
+  --bg: #fdfdfc;
+  --text: #1f2328;
+  --muted: #5f6670;
+  --rule: #dfe2e6;
+  --accent: #1f4e8c;
+  --accent-soft: #eaf1fb;
+  --highlight: #9a3412;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --rule: #2e3338;
+    --accent: #7fb0f0;
+    --accent-soft: #1d2a3b;
+    --highlight: #f0a36b;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Header ---------- */
+.intro {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.intro-text { flex: 1; min-width: 0; }
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+.tagline {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.intro p { margin: 0 0 12px; }
+
+.callout {
+  display: inline-block;
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+
+.links { margin-top: 16px !important; font-weight: 500; }
+.links span { color: var(--muted); margin: 0 6px; }
+
+.portrait {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* ---------- Sections ---------- */
+section { margin-top: 44px; }
+
+h2 {
+  font-size: 1.3rem;
+  margin: 0 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-note { color: var(--muted); margin: -4px 0 20px; font-size: 0.95rem; }
+
+.subhead {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 28px 0 8px;
+}
+
+/* ---------- News / Honors ---------- */
+.news { list-style: none; padding: 0; margin: 0; }
+.news li {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 4px 0;
+}
+.news .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- Publications ---------- */
+.pub {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+.pub:last-of-type { border-bottom: none; }
+
+.pub-thumb {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  background: #fff;
+  align-self: start;
+}
+
+.pub h3 {
+  font-size: 1.02rem;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+.pub p { margin: 0 0 4px; }
+.authors { font-size: 0.95rem; }
+.venue { font-style: italic; color: var(--muted); font-size: 0.95rem; }
+.highlight { color: var(--highlight); font-style: normal; font-weight: 600; }
+.summary { margin-top: 8px !important; font-size: 0.93rem; }
+
+.plain-pubs { padding-left: 20px; margin: 0; }
+.plain-pubs li { margin-bottom: 10px; font-size: 0.95rem; }
+.plain-pubs .title { font-weight: 600; }
+
+/* ---------- Experience ---------- */
+.entry { margin-bottom: 20px; }
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.org { font-weight: 600; }
+.when { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.role { margin: 2px 0 6px; color: var(--muted); font-size: 0.95rem; }
+.entry ul { margin: 0; padding-left: 20px; }
+.entry li { margin-bottom: 4px; font-size: 0.95rem; }
+
+footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 680px) {
+  .page { padding: 32px 16px; }
+  .intro { flex-direction: column-reverse; align-items: center; gap: 20px; }
+  .intro-text { width: 100%; }
+  .portrait { width: 160px; height: 160px; margin-top: 0; }
+  h1 { text-align: center; }
+  .tagline { text-align: center; }
+  .pub { grid-template-columns: 1fr; gap: 12px; }
+  .news li { grid-template-columns: 1fr; gap: 0; }
+}
